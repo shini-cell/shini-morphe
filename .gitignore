@@ -1,0 +1,32 @@
+# Gradle and build output
+.gradle/
+**/build/
+.kotlin/
+out/
+
+# Local IDE and machine settings
+.idea/
+.vscode/
+local.properties
+
+# Morphe Desktop local cache and signing keystore
+/morphe-data/
+*.keystore
+*.jks
+*.p12
+*.pfx
+
+# Generated patch bundles and patched/test APKs
+*.mpp
+*.apk
+*.apks
+
+# Downloaded tools and dependency directories
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+node_modules/
+
+# Local secrets
+.env
+.env.*
+!.env.example

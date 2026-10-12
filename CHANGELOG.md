@@ -1,0 +1,15 @@
+## [1.0.1](https://github.com/shini-cell/shini-morphe/compare/v1.0.0...v1.0.1) (2026-10-12)
+
+### 🐛 Bug Fixes
+
+* rename Morphe patch source ([e7ffaba](https://github.com/shini-cell/shini-morphe/commit/e7ffabafd39cca75ec6355edbdd7791035b3adaa))
+
+## 1.0.0 (2026-10-12)
+
+### 🐛 Bug Fixes
+
+* repair main branch release generation ([2317e7b](https://github.com/shini-cell/shini-morphe/commit/2317e7b3aaf85af0dda3faf99b6eaca0024bb3fa))
+
+### ✨ New Features
+
+* Add Nagram XF custom branding patch ([28f93b7](https://github.com/shini-cell/shini-morphe/commit/28f93b70c884ecfc8dc18c89418456cf3a2d7259))
