@@ -9,9 +9,45 @@ import java.io.File
 
 private const val ANDROID_NAMESPACE = "http://schemas.android.com/apk/res/android"
 private const val ADAPTIVE_ICON_NAME = "morphe_adaptive_icon_custom"
-private const val TELEGRAM_ICON = "@mipmap/ic_launcher_dr"
-private const val TELEGRAM_ROUND_ICON = "@mipmap/ic_launcher_dr_round"
 private val iconDensities = listOf("mdpi", "hdpi", "xhdpi", "xxhdpi", "xxxhdpi")
+
+private data class BuiltInIcon(val icon: String, val roundIcon: String)
+
+private val builtInIcons = mapOf(
+    "telegram" to BuiltInIcon("@mipmap/ic_launcher_dr", "@mipmap/ic_launcher_dr_round"),
+    "nagram" to BuiltInIcon("@mipmap/ic_launcher_nagram", "@mipmap/ic_launcher_nagram_round"),
+    "nagram_blue" to BuiltInIcon("@mipmap/ic_launcher_nagram_blue", "@mipmap/ic_launcher_nagram_blue_round"),
+    "blur_blue" to BuiltInIcon("@mipmap/ic_launcher_nagram_blur_blue", "@mipmap/ic_launcher_nagram_blur_blue_round"),
+    "colorful" to BuiltInIcon("@mipmap/ic_launcher_nagram_colorful", "@mipmap/ic_launcher_nagram_colorful_round"),
+    "dark_blue" to BuiltInIcon("@mipmap/ic_launcher_nagram_dark_blue", "@mipmap/ic_launcher_nagram_dark_blue_round"),
+    "dark_green" to BuiltInIcon("@mipmap/ic_launcher_nagram_darkgreen", "@mipmap/ic_launcher_nagram_darkgreen_round"),
+    "google" to BuiltInIcon("@mipmap/ic_launcher_nagram_google", "@mipmap/ic_launcher_nagram_google_round"),
+    "neon" to BuiltInIcon("@mipmap/ic_launcher_nagram_neon", "@mipmap/ic_launcher_nagram_neon_round"),
+    "niello" to BuiltInIcon("@mipmap/ic_launcher_nagram_round_niello", "@mipmap/ic_launcher_nagram_round_niello_round"),
+    "nox" to BuiltInIcon("@mipmap/icon_2_launcher", "@mipmap/icon_2_launcher_round"),
+    "premium" to BuiltInIcon("@mipmap/icon_3_launcher", "@mipmap/icon_3_launcher_round"),
+    "aqua" to BuiltInIcon("@mipmap/icon_4_launcher", "@mipmap/icon_4_launcher_round"),
+    "vintage" to BuiltInIcon("@mipmap/icon_6_launcher", "@mipmap/icon_6_launcher_round"),
+    "turbo" to BuiltInIcon("@mipmap/icon_5_launcher", "@mipmap/icon_5_launcher_round"),
+)
+
+private val builtInIconChoices = linkedMapOf(
+    "Telegram" to "telegram",
+    "Nagram" to "nagram",
+    "Nagram Blue" to "nagram_blue",
+    "Blur Blue" to "blur_blue",
+    "Colorful" to "colorful",
+    "Dark Blue" to "dark_blue",
+    "Dark Green" to "dark_green",
+    "Google" to "google",
+    "Neon" to "neon",
+    "Niello" to "niello",
+    "Nox" to "nox",
+    "Premium" to "premium",
+    "Aqua" to "aqua",
+    "Vintage" to "vintage",
+    "Turbo" to "turbo",
+)
 
 @Suppress("unused")
 val customBrandingPatch = resourcePatch(
@@ -27,10 +63,17 @@ val customBrandingPatch = resourcePatch(
         description = "The display name shown under the launcher icon.",
         required = false,
     )
+    val builtInIcon by stringOption(
+        key = "builtInIcon",
+        title = "Built-in icon",
+        description = "Choose one of the launcher icons included in Nagram XF.",
+        default = "telegram",
+        values = builtInIconChoices,
+    )
     val iconFolder by folderOption(
         key = "customIcon",
         title = "Custom icon",
-        description = "Folder containing custom adaptive icon files.",
+        description = "Optional folder containing custom adaptive icon files. When set, this overrides the built-in icon.",
         required = false,
     )
 
@@ -44,13 +87,13 @@ val customBrandingPatch = resourcePatch(
             }
 
             val customIconFolder = iconFolder?.trim()?.takeIf(String::isNotEmpty)
-            val launcherIcon = if (customIconFolder != null) {
+            val selectedIcon = builtInIcons[builtInIcon] ?: builtInIcons.getValue("telegram")
+            val (launcherIcon, roundLauncherIcon) = if (customIconFolder != null) {
                 installCustomIcon(File(customIconFolder))
-                "@mipmap/$ADAPTIVE_ICON_NAME"
+                "@mipmap/$ADAPTIVE_ICON_NAME" to "@mipmap/$ADAPTIVE_ICON_NAME"
             } else {
-                TELEGRAM_ICON
+                selectedIcon.icon to selectedIcon.roundIcon
             }
-            val roundLauncherIcon = if (customIconFolder != null) launcherIcon else TELEGRAM_ROUND_ICON
 
             application.setAttribute("android:icon", launcherIcon)
             application.setAttribute("android:roundIcon", roundLauncherIcon)

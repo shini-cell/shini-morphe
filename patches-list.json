@@ -39,9 +39,34 @@
           "values": null
         },
         {
+          "key": "builtInIcon",
+          "title": "Built-in icon",
+          "description": "Choose one of the launcher icons included in Nagram XF.",
+          "required": false,
+          "type": "kotlin.String",
+          "default": "telegram",
+          "values": {
+            "Telegram": "telegram",
+            "Nagram": "nagram",
+            "Nagram Blue": "nagram_blue",
+            "Blur Blue": "blur_blue",
+            "Colorful": "colorful",
+            "Dark Blue": "dark_blue",
+            "Dark Green": "dark_green",
+            "Google": "google",
+            "Neon": "neon",
+            "Niello": "niello",
+            "Nox": "nox",
+            "Premium": "premium",
+            "Aqua": "aqua",
+            "Vintage": "vintage",
+            "Turbo": "turbo"
+          }
+        },
+        {
           "key": "customIcon",
           "title": "Custom icon",
-          "description": "Folder containing custom adaptive icon files.",
+          "description": "Optional folder containing custom adaptive icon files. When set, this overrides the built-in icon.",
           "required": false,
           "type": "kotlin.String",
           "default": null,

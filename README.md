@@ -17,7 +17,7 @@ Custom patches for Morphe.
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
-| [Custom branding](#custom-branding) | Changes the Nagram XF launcher name and optionally replaces its launcher icon. | • App name<br>• Custom icon |
+| [Custom branding](#custom-branding) | Changes the Nagram XF launcher name and optionally replaces its launcher icon. | • App name<br>• Built-in icon<br>• Custom icon |
 
 </details>
 
