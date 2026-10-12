@@ -1,3 +1,9 @@
+## 1.0.0 (2026-10-12)
+
+### ✨ New Features
+
+* Morphe patches ([0aa9fa8](https://github.com/shini-cell/shini-morphe/commit/0aa9fa873f658acaaacbc7e4042c99e428438bdc))
+
 ## [1.0.1](https://github.com/shini-cell/shini-morphe/compare/v1.0.0...v1.0.1) (2026-10-12)
 
 ### 🐛 Bug Fixes

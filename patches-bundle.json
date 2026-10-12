@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-10-12T06:56:00",
-  "description": "## [1.0.1](https://github.com/shini-cell/shini-morphe/compare/v1.0.0...v1.0.1) (2026-10-12)\n\n### 🐛 Bug Fixes\n\n* rename Morphe patch source ([e7ffaba](https://github.com/shini-cell/shini-morphe/commit/e7ffabafd39cca75ec6355edbdd7791035b3adaa))",
-  "download_url": "https://github.com/shini-cell/shini-morphe/releases/download/v1.0.1/patches-1.0.1.mpp",
+  "created_at": "2026-10-12T07:06:47",
+  "description": "## 1.0.0 (2026-10-12)\n\n### ✨ New Features\n\n* Morphe patches ([0aa9fa8](https://github.com/shini-cell/shini-morphe/commit/0aa9fa873f658acaaacbc7e4042c99e428438bdc))",
+  "download_url": "https://github.com/shini-cell/shini-morphe/releases/download/v1.0.0/patches-1.0.0.mpp",
   "signature_download_url": "",
-  "version": "1.0.1"
+  "version": "1.0.0"
 }
