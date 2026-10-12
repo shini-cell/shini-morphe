@@ -1,3 +1,9 @@
+## [1.2.1](https://github.com/shini-cell/shini-morphe/compare/v1.2.0...v1.2.1) (2026-10-12)
+
+### 🐛 Bug Fixes
+
+* trigger Citymapper patch release ([63bc168](https://github.com/shini-cell/shini-morphe/commit/63bc1680a5113321cc297703c3de5bf75ac5e8a1))
+
 ## [1.2.0](https://github.com/shini-cell/shini-morphe/compare/v1.1.0...v1.2.0) (2026-10-12)
 
 ### ✨ New Features
