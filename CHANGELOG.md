@@ -1,3 +1,9 @@
+## [1.2.2](https://github.com/shini-cell/shini-morphe/compare/v1.2.1...v1.2.2) (2026-10-12)
+
+### 🐛 Bug Fixes
+
+* disable Citymapper dark mode patch ([ad6e79e](https://github.com/shini-cell/shini-morphe/commit/ad6e79e41774ee1cff250d66c3355b8498737363))
+
 ## [1.2.1](https://github.com/shini-cell/shini-morphe/compare/v1.2.0...v1.2.1) (2026-10-12)
 
 ### 🐛 Bug Fixes
