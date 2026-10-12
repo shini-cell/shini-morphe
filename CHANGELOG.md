@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/shini-cell/shini-morphe/compare/v1.0.0...v1.1.0) (2026-10-12)
+
+### ✨ New Features
+
+* add built-in launcher icon choices ([68640df](https://github.com/shini-cell/shini-morphe/commit/68640dff87d7928f24c9b19dcbb5789062a0f2fc))
+
 ## 1.0.0 (2026-10-12)
 
 ### ✨ New Features
