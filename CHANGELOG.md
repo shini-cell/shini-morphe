@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/shini-cell/shini-morphe/compare/v1.1.0...v1.2.0) (2026-10-12)
+
+### ✨ New Features
+
+* add Citymapper Force Dark patch ([95a1302](https://github.com/shini-cell/shini-morphe/commit/95a130209aa2f357e6557a4fc8158e72fc0c939f))
+
 ## [1.1.0](https://github.com/shini-cell/shini-morphe/compare/v1.0.0...v1.1.0) (2026-10-12)
 
 ### ✨ New Features

@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-10-12T07:17:33",
-  "description": "## [1.1.0](https://github.com/shini-cell/shini-morphe/compare/v1.0.0...v1.1.0) (2026-10-12)\n\n### ✨ New Features\n\n* add built-in launcher icon choices ([68640df](https://github.com/shini-cell/shini-morphe/commit/68640dff87d7928f24c9b19dcbb5789062a0f2fc))",
-  "download_url": "https://github.com/shini-cell/shini-morphe/releases/download/v1.1.0/patches-1.1.0.mpp",
+  "created_at": "2026-10-12T11:30:59",
+  "description": "## [1.2.0](https://github.com/shini-cell/shini-morphe/compare/v1.1.0...v1.2.0) (2026-10-12)\n\n### ✨ New Features\n\n* add Citymapper Force Dark patch ([95a1302](https://github.com/shini-cell/shini-morphe/commit/95a130209aa2f357e6557a4fc8158e72fc0c939f))",
+  "download_url": "https://github.com/shini-cell/shini-morphe/releases/download/v1.2.0/patches-1.2.0.mpp",
   "signature_download_url": "",
-  "version": "1.1.0"
+  "version": "1.2.0"
 }
