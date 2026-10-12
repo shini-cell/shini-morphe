@@ -34,5 +34,26 @@ val citymapperDarkModePatch = resourcePatch(
                 }
             forceDarkItem.textContent = "true"
         }
+
+        // Citymapper 11.59.3 ships a values-v29 override that explicitly disables
+        // Force Dark for JustRideSDKTheme. On Android 10+, that higher-priority
+        // resource wins over AppBaseTheme, so update the opt-out as well.
+        document("res/values-v29/styles.xml").use { styles ->
+            val styleElements = styles.getElementsByTagName("style")
+            for (index in 0 until styleElements.length) {
+                val style = styleElements.item(index) as Element
+                val children = style.childNodes
+                for (childIndex in 0 until children.length) {
+                    val item = children.item(childIndex) as? Element ?: continue
+                    if (
+                        item.tagName == "item" &&
+                        item.getAttribute("name") == "android:forceDarkAllowed" &&
+                        item.textContent.trim() == "false"
+                    ) {
+                        item.textContent = "true"
+                    }
+                }
+            }
+        }
     }
 }
