@@ -10,14 +10,9 @@ Custom patches for Morphe.
 <summary>📦 Nagram XF&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
 
-**🎯 Supported versions:**
-
-| 12.10.1-30dcd6c |
-| :---: |
-
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
-| [Custom branding](#custom-branding) | Changes the Nagram XF launcher name and optionally replaces its launcher icon. | • App name<br>• Built-in icon<br>• Custom icon |
+| [Custom branding](#custom-branding) | Changes the Nagram XF launcher name and optionally replaces its launcher icon. | • App name<br>• Install alongside original<br>• Built-in icon<br>• Custom icon |
 
 </details>
 
