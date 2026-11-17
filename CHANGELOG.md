@@ -1,3 +1,9 @@
+## [1.3.1](https://github.com/shini-cell/shini-morphe/compare/v1.3.0...v1.3.1) (2026-11-17)
+
+### 🐛 Bug Fixes
+
+* rename permissions for morphe package ([d4af652](https://github.com/shini-cell/shini-morphe/commit/d4af65239aaa0270105f2b14811954fa43bad78e))
+
 ## [1.3.0](https://github.com/shini-cell/shini-morphe/compare/v1.2.2...v1.3.0) (2026-11-17)
 
 ### ✨ New Features
