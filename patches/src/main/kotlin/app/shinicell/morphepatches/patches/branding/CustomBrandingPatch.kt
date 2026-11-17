@@ -91,10 +91,25 @@ val customBrandingPatch = resourcePatch(
             val application = manifest.getElementsByTagName("application").item(0) as Element
 
             if (installAlongsideOriginal == "true") {
-                manifest.documentElement.setAttribute(
-                    "package",
-                    manifest.documentElement.getAttribute("package") + MORPHE_PACKAGE_SUFFIX,
-                )
+                val manifestRoot = manifest.documentElement
+                val originalPackage = manifestRoot.getAttribute("package")
+                val morphePackage = originalPackage + MORPHE_PACKAGE_SUFFIX
+                manifestRoot.setAttribute("package", morphePackage)
+
+                listOf("permission", "permission-group", "permission-tree", "uses-permission")
+                    .forEach { tagName ->
+                        val permissions = manifest.getElementsByTagName(tagName)
+                        for (index in 0 until permissions.length) {
+                            val permission = permissions.item(index) as Element
+                            val name = permission.getAttribute("android:name")
+                            if (name.startsWith("$originalPackage.")) {
+                                permission.setAttribute(
+                                    "android:name",
+                                    morphePackage + name.removePrefix(originalPackage),
+                                )
+                            }
+                        }
+                    }
             }
 
             appName?.trim()?.takeIf(String::isNotEmpty)?.let { name ->
