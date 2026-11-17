@@ -1,3 +1,9 @@
+## [1.3.2](https://github.com/shini-cell/shini-morphe/compare/v1.3.1...v1.3.2) (2026-11-17)
+
+### 🐛 Bug Fixes
+
+* rewrite package-derived manifest identifiers ([fc92b24](https://github.com/shini-cell/shini-morphe/commit/fc92b243920a976d41be68444b96f4daea91dd36))
+
 ## [1.3.1](https://github.com/shini-cell/shini-morphe/compare/v1.3.0...v1.3.1) (2026-11-17)
 
 ### 🐛 Bug Fixes
